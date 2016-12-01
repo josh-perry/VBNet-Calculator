@@ -58,4 +58,28 @@
         ' Assert
         Assert.AreEqual(result, 3)
     End Sub
+
+    <TestMethod()> Public Sub Test_SimpleOrderOfOperations()
+        ' Arrange
+        Dim expString As String = "2 + 3 * 4"
+        Dim exp As ExpressionCalculator.Expression = New ExpressionCalculator.Expression(expString)
+
+        ' Act
+        Dim result = exp.Calculate()
+
+        ' Assert
+        Assert.AreEqual(result, 14)
+    End Sub
+
+    <TestMethod()> Public Sub Test_Brackets()
+        ' Arrange
+        Dim expString As String = "(2 + 3) * 4"
+        Dim exp As ExpressionCalculator.Expression = New ExpressionCalculator.Expression(expString)
+
+        ' Act
+        Dim result = exp.Calculate()
+
+        ' Assert
+        Assert.AreEqual(result, 20)
+    End Sub
 End Class
