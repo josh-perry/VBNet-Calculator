@@ -1,4 +1,6 @@
-﻿Class MainWindow
+﻿Imports System.Windows.Controls.Primitives
+
+Class MainWindow
     ''' <summary>
     ''' View model to use.
     ''' </summary>
@@ -9,6 +11,11 @@
     ''' Allows all buttons to use the same event handler.
     ''' </summary>
     Private AcceptedKeys As Dictionary(Of String, String)
+
+    ''' <summary>
+    ''' If true, the result from the previous formula will be put into the expression box of the next.
+    ''' </summary>
+    Private PushExpressionToResult As Boolean
 
     ''' <summary>
     ''' Constructor, sets up AcceptedKeys and the DataContext.
@@ -45,7 +52,13 @@
     Private Sub CalculateExpression()
         Try
             Dim result As Integer = New ExpressionCalculator.Expression(View.ExpressionTextProperty).Calculate()
-            View.ResultTextProperty = result
+
+            If PushExpressionToResult = True Then
+                View.ExpressionTextProperty = result
+                View.ResultTextProperty = String.Empty
+            Else
+                View.ResultTextProperty = result
+            End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error")
         End Try
@@ -128,6 +141,15 @@
 
         ' Clear result
         View.ResultTextProperty = String.Empty
+    End Sub
+
+    ''' <summary>
+    ''' Handler for click event on the history button.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub HistoryButton_Click(sender As Object, e As RoutedEventArgs)
+        PushExpressionToResult = DirectCast(sender, ToggleButton).IsChecked
     End Sub
 #End Region
 End Class
