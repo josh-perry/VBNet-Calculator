@@ -30,9 +30,10 @@
                  TextAlignment="Right"
                  FontSize="16"
                  FontFamily="Courier New"
-                 IsReadOnly="True"
+                 IsReadOnly="False"
                  Margin="5"
-                 Text="{Binding Path=ExpressionTextProperty}"/>
+                 Text="{Binding Path=ExpressionTextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 KeyDown="ExpressionTextBox_KeyDown"/>
 
         <!-- Textbox to display results of calculated expressions -->
         <TextBox x:Name="ResultTextBox"
@@ -72,25 +73,25 @@
             </Grid.Resources>
 
             <!-- Numerical inputs -->
-            <Button Click="NumberButton_Click" Content="7" Grid.Column="0" Grid.Row="0"/>
-            <Button Click="NumberButton_Click" Content="8" Grid.Column="1" Grid.Row="0"/>
-            <Button Click="NumberButton_Click" Content="9" Grid.Column="2" Grid.Row="0"/>
-            <Button Click="NumberButton_Click" Content="4" Grid.Column="0" Grid.Row="1"/>
-            <Button Click="NumberButton_Click" Content="5" Grid.Column="1" Grid.Row="1"/>
-            <Button Click="NumberButton_Click" Content="6" Grid.Column="2" Grid.Row="1"/>
-            <Button Click="NumberButton_Click" Content="1" Grid.Column="0" Grid.Row="2"/>
-            <Button Click="NumberButton_Click" Content="2" Grid.Column="1" Grid.Row="2"/>
-            <Button Click="NumberButton_Click" Content="3" Grid.Column="2" Grid.Row="2"/>
-            <Button Click="NumberButton_Click" Content="0" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"/>
+            <Button Click="Button_Click" Content="7" Grid.Column="0" Grid.Row="0"/>
+            <Button Click="Button_Click" Content="8" Grid.Column="1" Grid.Row="0"/>
+            <Button Click="Button_Click" Content="9" Grid.Column="2" Grid.Row="0"/>
+            <Button Click="Button_Click" Content="4" Grid.Column="0" Grid.Row="1"/>
+            <Button Click="Button_Click" Content="5" Grid.Column="1" Grid.Row="1"/>
+            <Button Click="Button_Click" Content="6" Grid.Column="2" Grid.Row="1"/>
+            <Button Click="Button_Click" Content="1" Grid.Column="0" Grid.Row="2"/>
+            <Button Click="Button_Click" Content="2" Grid.Column="1" Grid.Row="2"/>
+            <Button Click="Button_Click" Content="3" Grid.Column="2" Grid.Row="2"/>
+            <Button Click="Button_Click" Content="0" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"/>
 
             <!-- Equals button -->
             <Button Click="EqualsButton_Click" Content="=" Grid.Column="2" Grid.Row="3"/>
 
             <!-- Operation inputs -->
-            <Button Click="PlusButton_Click" Content="+" Grid.Column="3" Grid.Row="0"/>
-            <Button Click="MinusButton_Click" Content="−" Grid.Column="3" Grid.Row="1"/>
-            <Button Click="MultiplyButton_Click" Content="×" Grid.Column="3" Grid.Row="2"/>
-            <Button Click="DivideButton_Click" Content="÷" Grid.Column="3" Grid.Row="3"/>
+            <Button Click="Button_Click" Content="+" Grid.Column="3" Grid.Row="0"/>
+            <Button Click="Button_Click" Content="−" Grid.Column="3" Grid.Row="1"/>
+            <Button Click="Button_Click" Content="×" Grid.Column="3" Grid.Row="2"/>
+            <Button Click="Button_Click" Content="÷" Grid.Column="3" Grid.Row="3"/>
         </Grid>
     </Grid>
 </Window>

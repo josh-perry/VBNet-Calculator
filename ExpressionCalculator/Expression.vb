@@ -22,12 +22,7 @@
 
         Dim scriptControl As New MSScriptControl.ScriptControl()
         scriptControl.Language = "VBScript"
-
-        Try
-            result = Convert.ToDouble(scriptControl.Eval(Expression))
-        Catch ex As Exception
-
-        End Try
+        result = Convert.ToDouble(scriptControl.Eval(Expression))
 
         Return result
     End Function
