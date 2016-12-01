@@ -7,6 +7,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "vbnet-calculator", "vbnet-c
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExpressionCalculator", "ExpressionCalculator\ExpressionCalculator.vbproj", "{6503EA66-5D52-4DD7-884A-048501DCDB6E}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ExpressionCalculator-Tests", "ExpressionCalculator-Tests\ExpressionCalculator-Tests.vbproj", "{5EE058CA-0A6D-4869-955A-A8A517CC1744}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6503EA66-5D52-4DD7-884A-048501DCDB6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6503EA66-5D52-4DD7-884A-048501DCDB6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6503EA66-5D52-4DD7-884A-048501DCDB6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE058CA-0A6D-4869-955A-A8A517CC1744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE058CA-0A6D-4869-955A-A8A517CC1744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE058CA-0A6D-4869-955A-A8A517CC1744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE058CA-0A6D-4869-955A-A8A517CC1744}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
