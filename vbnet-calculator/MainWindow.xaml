@@ -9,7 +9,7 @@
         Height="350"
         Width="200"
         ResizeMode="NoResize"
-        Background="#eff5ff">
+        Background="#dbe8ff">
     <Grid>
         <Grid.RowDefinitions>
             <!-- Expression box -->
@@ -32,6 +32,7 @@
                  FontFamily="Courier New"
                  IsReadOnly="False"
                  Margin="5"
+                 Background="Transparent"
                  Text="{Binding Path=ExpressionTextProperty, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                  KeyDown="ExpressionTextBox_KeyDown"/>
 
@@ -45,6 +46,9 @@
                  FontFamily="Courier New"
                  IsReadOnly="True"
                  Margin="5"
+                 Background="Transparent"
+                 BorderBrush="Transparent"
+                 IsHitTestVisible="False"
                  Text="{Binding Path=ResultTextProperty}"/>
 
         <!-- Input buttons grid -->
