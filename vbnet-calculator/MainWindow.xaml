@@ -61,6 +61,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <Grid.Resources>
@@ -71,27 +72,31 @@
                     <Setter Property="FontSize" Value="24"/>
                 </Style>
             </Grid.Resources>
+            
+            <!-- Clear inputs -->
+            <Button Click="BackspaceButton_Click" Content="←" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+            <Button Click="ClearButton_Click" Content="CE" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2"/>
 
             <!-- Numerical inputs -->
-            <Button Click="Button_Click" Content="7" Grid.Column="0" Grid.Row="0"/>
-            <Button Click="Button_Click" Content="8" Grid.Column="1" Grid.Row="0"/>
-            <Button Click="Button_Click" Content="9" Grid.Column="2" Grid.Row="0"/>
-            <Button Click="Button_Click" Content="4" Grid.Column="0" Grid.Row="1"/>
-            <Button Click="Button_Click" Content="5" Grid.Column="1" Grid.Row="1"/>
-            <Button Click="Button_Click" Content="6" Grid.Column="2" Grid.Row="1"/>
-            <Button Click="Button_Click" Content="1" Grid.Column="0" Grid.Row="2"/>
-            <Button Click="Button_Click" Content="2" Grid.Column="1" Grid.Row="2"/>
-            <Button Click="Button_Click" Content="3" Grid.Column="2" Grid.Row="2"/>
-            <Button Click="Button_Click" Content="0" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"/>
+            <Button Click="Button_Click" Content="7" Grid.Column="0" Grid.Row="1"/>
+            <Button Click="Button_Click" Content="8" Grid.Column="1" Grid.Row="1"/>
+            <Button Click="Button_Click" Content="9" Grid.Column="2" Grid.Row="1"/>
+            <Button Click="Button_Click" Content="4" Grid.Column="0" Grid.Row="2"/>
+            <Button Click="Button_Click" Content="5" Grid.Column="1" Grid.Row="2"/>
+            <Button Click="Button_Click" Content="6" Grid.Column="2" Grid.Row="2"/>
+            <Button Click="Button_Click" Content="1" Grid.Column="0" Grid.Row="3"/>
+            <Button Click="Button_Click" Content="2" Grid.Column="1" Grid.Row="3"/>
+            <Button Click="Button_Click" Content="3" Grid.Column="2" Grid.Row="3"/>
+            <Button Click="Button_Click" Content="0" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"/>
 
             <!-- Equals button -->
-            <Button Click="EqualsButton_Click" Content="=" Grid.Column="2" Grid.Row="3"/>
+            <Button Click="EqualsButton_Click" Content="=" Grid.Column="2" Grid.Row="4"/>
 
             <!-- Operation inputs -->
-            <Button Click="Button_Click" Content="+" Grid.Column="3" Grid.Row="0"/>
-            <Button Click="Button_Click" Content="−" Grid.Column="3" Grid.Row="1"/>
-            <Button Click="Button_Click" Content="×" Grid.Column="3" Grid.Row="2"/>
-            <Button Click="Button_Click" Content="÷" Grid.Column="3" Grid.Row="3"/>
+            <Button Click="Button_Click" Content="+" Grid.Column="3" Grid.Row="1"/>
+            <Button Click="Button_Click" Content="−" Grid.Column="3" Grid.Row="2"/>
+            <Button Click="Button_Click" Content="×" Grid.Column="3" Grid.Row="3"/>
+            <Button Click="Button_Click" Content="÷" Grid.Column="3" Grid.Row="4"/>
         </Grid>
     </Grid>
 </Window>

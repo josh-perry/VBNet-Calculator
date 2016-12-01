@@ -62,5 +62,23 @@
             Return
         End If
     End Sub
+
+    Private Sub BackspaceButton_Click(sender As Object, e As RoutedEventArgs)
+        If View.ExpressionTextProperty.Length <= 0 Then
+            ' Return early if the expression isn't long enough
+            Return
+        End If
+
+        ' Cut off last character
+        View.ExpressionTextProperty = View.ExpressionTextProperty.Substring(0, View.ExpressionTextProperty.Length - 1)
+    End Sub
+
+    Private Sub ClearButton_Click(sender As Object, e As RoutedEventArgs)
+        ' Clear expression
+        View.ExpressionTextProperty = String.Empty
+
+        ' Clear result
+        View.ResultTextProperty = String.Empty
+    End Sub
 #End Region
 End Class
